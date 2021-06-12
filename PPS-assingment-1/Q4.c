@@ -4,5 +4,5 @@ int main()
 {
     time_t t;
     time(&t);
-    printf("Todays Time:%s", ctime(&t));
+    printf("\n \nTodays Time:%s\n", ctime(&t));
 }
