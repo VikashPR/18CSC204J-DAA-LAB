@@ -1,43 +1,46 @@
 #include <stdio.h>
-#include <string.h>
-
-struct Books
-{
-    char title[50];
-    char author[50];
-    char subject[100];
-    int book_id;
-};
-
+const int A = 2;
+const int B = 3;
 int main()
 {
+    int arr1[A][B], arr2[A][B], sum[101][101], i, j;
+    printf("Enter the values of arr1\n");
+    for (i = 0; i < A; i++)
+    {
+        for (j = 0; j < B; j++)
+        {
+            printf("Enter the arr1[%d][%d]:", i + 1, j + 1);
+            scanf("%d", &arr1[i][j]);
+        }
+    }
+    printf("Enter the values of arr2\n");
+    for (i = 0; i < A; i++)
+    {
+        for (j = 0; j < B; j++)
+        {
+            printf("Enter the arr2[%d][%d]:", i + 1, j + 1);
+            scanf("%d", &arr2[i][j]);
+        }
+    }
 
-    struct Books Book1; /* Declare Book1 of type Book */
-    struct Books Book2; /* Declare Book2 of type Book */
-
-    /* book 1 specification */
-    strcpy(Book1.title, "C Programming");
-    strcpy(Book1.author, "Nuha Ali");
-    strcpy(Book1.subject, "C Programming Tutorial");
-    Book1.book_id = 6495407;
-
-    /* book 2 specification */
-    strcpy(Book2.title, "Telecom Billing");
-    strcpy(Book2.author, "Zara Ali");
-    strcpy(Book2.subject, "Telecom Billing Tutorial");
-    Book2.book_id = 6495700;
-
-    /* print Book1 info */
-    printf("Book 1 title : %s\n", Book1.title);
-    printf("Book 1 author : %s\n", Book1.author);
-    printf("Book 1 subject : %s\n", Book1.subject);
-    printf("Book 1 book_id : %d\n", Book1.book_id);
-
-    /* print Book2 info */
-    printf("Book 2 title : %s\n", Book2.title);
-    printf("Book 2 author : %s\n", Book2.author);
-    printf("Book 2 subject : %s\n", Book2.subject);
-    printf("Book 2 book_id : %d\n", Book2.book_id);
+    for (i = 0; i < A; i++)
+    {
+        for (j = 0; j < B; j++)
+        {
+            sum[i][j] = arr1[i][j] + arr2[i][j];
+        }
+    }
+    for (i = 0; i < A; i++)
+    {
+        for (j = 0; j < B; j++)
+        {
+            printf("%d  ", sum[i][j]);
+            if (j == B - 1)
+            {
+                printf("\n\n");
+            }
+        }
+    }
 
     return 0;
 }
