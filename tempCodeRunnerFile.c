@@ -1,5 +1,10 @@
-printf("\n The merged array is:");
-    for (i = 0; i < o; i++)
-    {
-        printf("\n %d \n", c[i]);
-    }
+if (i % 2 == 0)
+            // {
+            //     // printf("Number %d is missing from the array", i);
+            //     printf("\nThe missing number is even");
+            // }
+            // else
+            // {
+            //     // printf("Number %d is missing from the array", i);
+            //     printf("\nThe missing number is odd");
+            // }
