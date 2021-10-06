@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int n, i, j, missing, sum = 0;
+    int n, i, missing;
     printf("Enter the size of the array:");
     scanf("%d", &n);
     int a[n - 1];
@@ -14,17 +14,12 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        // if (a[i] - i != diff)
-        // {
-        //     while (diff < a[i] - i)
-        //     {
-        //         printf("%d ", i + diff);
-        //         diff++;
-        //     }
-        // }
         if (a[i] - i != diff)
         {
-            printf("%d ", i + diff);
+            missing = i + diff;
+            printf("%d: ", missing);
+            missing % 2 == 0 ? printf("Even") : printf("Odd");
+            printf("\n");
             diff++;
         }
     }
