@@ -6,6 +6,7 @@ int main()
     cout << "Enter the size of the array";
     cin >> n;
     int a[n - 1];
+    cout << "Enter the array elements one by one:\n";
     for (i = 0; i < n; i++)
     {
         cin >> a[i];
