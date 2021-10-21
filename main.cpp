@@ -1,29 +1,16 @@
 #include <iostream>
-#include <string>
 using namespace std;
-class Employee
+
+class Students
 {
-public:
+private:
     string Name;
-    string Company;
-    int Age;
-    void intro()
-    {
-        cout << "Yo " << Name << " Wasupp ?\n";
-        cout << "Age - " << Age << "\n";
-        cout << "Company - " << Company << "\n";
-    }
-    Employee(string name, string company, int age)
-    {
-        Name = name;
-        Company = company;
-        Age = age;
-    }
+    string University;
+    int age;
+
+public:
 };
 int main()
 {
-    Employee employee1 = Employee("Vikash", "Webilicious", 18);
-    employee1.intro();
-
     return 0;
 }
