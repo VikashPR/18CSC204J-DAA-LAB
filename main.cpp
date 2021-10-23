@@ -3,21 +3,18 @@ using namespace std;
 class myProfile
 {
 public:
-    string name;
-    string designation;
-    int age;
-    string course;
     void Profile(string name, string designation, int age, string course)
     {
         cout << "Enter the userName:";
         cin >> name;
         cout << "\nEnter the designation:";
         cin >> designation;
-        cout << "\n Enter the course:";
+        cout << "\nEnter the course:";
         cin >> course;
-        cout << "\n Enter the age:";
+        cout << "\nEnter the age:";
         cin >> age;
-        cout << name << " " << designation << " " << course << " " << age << " \n";
+        cout << "\n"
+             << name << " " << designation << " " << course << " " << age << "\n\n";
     }
 };
 int main()
