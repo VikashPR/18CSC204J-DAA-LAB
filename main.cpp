@@ -1,25 +1,26 @@
 #include <iostream>
 using namespace std;
-class myProfile
+class Triangle
 {
 public:
-    void Profile(string name, string designation, int age, string course)
+    int length, breath, height;
+    // Constructor
+    Triangle(int l, int b, int h)
     {
-        cout << "Enter the userName:";
-        cin >> name;
-        cout << "\nEnter the designation:";
-        cin >> designation;
-        cout << "\nEnter the course:";
-        cin >> course;
-        cout << "\nEnter the age:";
-        cin >> age;
-        cout << "\n"
-             << name << " " << designation << " " << course << " " << age << "\n\n";
+        length = l;
+        breath = b;
+        height = h;
+    }
+    void printAP()
+    {
+        cout << "Area: " << length * breath * height << "\n";
+        cout << "Perimeter: " << (length + height + breath) / 2 << "\n";
     }
 };
 int main()
 {
-    myProfile p1, p2;
-    p1.Profile("Vikash2806", "Student", 18, "B.tech CSE");
-    p2.Profile("Vikash2806", "Student", 18, "B.tech CSE");
+    Triangle t(4, 6, 10);
+    t.printAP();
+
+    return 0;
 }
