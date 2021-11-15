@@ -15,9 +15,9 @@ int main()
     ptr = head;
     while (ptr != NULL)
     {
-        cout << "Enter the age: ";
-        cin >> head->age;
-        cout << "Proceed (y/n): ";
+        cout << "Enter the number: ";
+        cin >> ptr->age;
+        cout << "Proceed (y/n)? ";
         cin >> ch;
         if (ch == 'y')
         {
@@ -30,13 +30,15 @@ int main()
             ptr = NULL;
         }
     }
+
+    ptr = head;
     cout << "The linkedList elements are:"
          << "\n";
     ptr = head;
-    while (head != NULL)
+    while (ptr != NULL)
     {
-        cout << " " << ptr->age << "\n";
-        head = head->next;
+        cout << ptr->age << '\n';
+        ptr = ptr->next;
     }
     return 0;
 }
