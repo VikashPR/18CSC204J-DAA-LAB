@@ -30,8 +30,6 @@ int main()
             ptr = NULL;
         }
     }
-
-    ptr = head;
     cout << "The linkedList elements are:"
          << "\n";
     ptr = head;

@@ -1,26 +1,39 @@
 #include <iostream>
 using namespace std;
-class Triangle
+struct Node
 {
-public:
-    int length, breath, height;
-    // Constructor
-    Triangle(int l, int b, int h)
-    {
-        length = l;
-        breath = b;
-        height = h;
-    }
-    void printAP()
-    {
-        cout << "Area: " << length * breath * height << "\n";
-        cout << "Perimeter: " << (length + height + breath) / 2 << "\n";
-    }
+    int data;
+    struct Node *next;
 };
 int main()
 {
-    Triangle t(4, 6, 10);
-    t.printAP();
-
+    Node *head, *ptr;
+    char dec = 'y';
+    head = new Node;
+    ptr = head;
+    while (ptr != NULL)
+    {
+        cout << "Enter the node data: ";
+        cin >> ptr->data;
+        cout << "proceed (y/n): ";
+        cin >> dec;
+        if (dec == 'y')
+        {
+            ptr->next = new Node;
+            ptr = ptr->next;
+        }
+        else
+        {
+            ptr->next = NULL;
+            ptr = NULL;
+        }
+    }
+    cout << "The linked list Data:";
+    ptr = head;
+    while (ptr != NULL)
+    {
+        cout << ptr->data << " ";
+        ptr = ptr->next;
+    }
     return 0;
 }
