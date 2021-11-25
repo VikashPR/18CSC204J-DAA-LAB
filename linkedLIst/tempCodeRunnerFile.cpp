@@ -29,14 +29,11 @@ int main()
         }
     }
     ptr = head;
-    int count = 0;
     while (ptr != NULL)
     {
         cout << ptr->data << " ";
         ptr = ptr->next;
-        count++;
     }
-    cout << "\nTotal number of node in the list is:" << count;
     int del;
     cout << "\nEnter the node value to be deleted:";
     cin >> del;
