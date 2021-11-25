@@ -1,44 +1,31 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
-int binarySearch(int a, int n, int t)
+class Student : public Assingment
 {
-    int l;
-    int r = n - 1;
-    while (l <= r)
+};
+class Assingment
+{
+public:
+    int num;
+    void get()
     {
-        int m = floor((l + r) / 2);
-
-        if (a[m] < t)
-        {
-            l = m + 1;
-        }
-        else if (a[m] > t)
-        {
-            r = m - 1;
-        }
-        else
-        {
-            return m;
-        }
+        cin >> num;
     }
-}
+    void display()
+    {
+        int count = 0;
+        while (num != 0)
+        {
+            count++;
+            num = num / 10;
+        }
+        cout << count;
+    }
+};
 int main()
 {
-    int i, n, numFind, pos;
-    int a[10101];
-    cout << "\n Enter the size of the array a[]:";
-    cin >> n;
-    cout << "\n Enter the size of the array a[] to find:";
-    cin >> numFind;
-    cout << "Enter the array elements one by one : \n";
-    for (i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    for (i = 0; i < n; i++)
-    {
-        pos = binarySearch(a[i], n, numFind);
-        cout << "Position is" << pos;
-    }
+    Student obj;
+    obj.get();
+    obj.display();
+    return 0;
 }
