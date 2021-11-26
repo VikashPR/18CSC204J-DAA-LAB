@@ -7,7 +7,7 @@ struct Node
 };
 int main()
 {
-    Node *ptr, *head, *prePtr;
+    Node *ptr, *head, *prePtr, *newNode;
     head = new Node;
     ptr = head;
     char ch = 'y';
@@ -15,7 +15,7 @@ int main()
     {
         cout << "Enter the data value:";
         cin >> ptr->data;
-        cout << "Proceed insertion?(y/n)";
+        cout << "Proceed creation?(y/n)";
         cin >> ch;
         if (ch == 'y')
         {
@@ -37,6 +37,32 @@ int main()
         count++;
     }
     cout << "\nTotal number of node in the list is:" << count;
+    int choose;
+    cout << "\n--------------Choose------------------\n";
+    cout << "1 => Insert in the Beginning of the list";
+    cout << "\nChoose:";
+    // cout << "2 => Insert in the Middle of the list";
+    // cout << "2 => Insert in the End of the list";
+    cin >> choose;
+    switch (choose)
+    {
+    case 1:
+        ptr = head;
+        newNode = new Node;
+        cout << "\nEnter the data to insert in the Beginning:";
+        cin >> newNode->data;
+        head = newNode;
+        newNode->next = ptr;
+        break;
+        // case2:
+        //     newNode = new Node;
+        //     cout << "Enter the data to insert in the End:";
+        //     cin >> newNode->data;
+        //     while (ptr->next != NULL)
+        //     {
+        //     }
+    }
+
     int del;
     cout << "\nEnter the node value to be deleted:";
     cin >> del;
