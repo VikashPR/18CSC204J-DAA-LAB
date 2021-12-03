@@ -7,11 +7,11 @@ struct Node
 };
 int main()
 {
-    Node *ptr, *head, *prePtr, *newNode;
+    Node *ptr, *head, *newNode, *prePtr, *temp;
     head = new Node;
     ptr = head;
     char ch = 'y';
-    cout << "Create the linkedList\n";
+    cout << "Create LinkedList:";
     while (ptr != NULL)
     {
         cout << "Enter the data value:";
