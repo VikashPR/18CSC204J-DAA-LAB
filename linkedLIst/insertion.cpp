@@ -41,7 +41,7 @@ int main()
     int con = 0;
     while (con != 8)
     {
-        cout << "\n--------------choose------------------\n";
+        cout << "\n\n----------------choose------------------\n";
         cout << "1 => Insert in the Beginning of the list\n";
         cout << "2 => Insert in the Middle of the list\n";
         cout << "3 => Delete in the Beginning of the list\n";
