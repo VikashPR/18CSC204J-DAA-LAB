@@ -48,11 +48,6 @@ int main()
     {
         newArr[i] = arr[i];
     }
-    cout << "New Array Value:";
-    for (int i = 0; i < n; i++)
-    {
-        cout << newArr[i] << " ";
-    }
     for (int i = 1; i < n; i++)
     {
         for (int j = 0; j < n - 1; j++)
@@ -65,20 +60,19 @@ int main()
             }
         }
     }
-    cout << "\nSorted newArray\n";
-    for (int i = 0; i < n; i++)
+    int c = n;
+    c = 0;
+    cout << "\n";
+    while (n != c)
     {
-        cout << newArr[i] << " ";
-    }
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < i; j++)
+        for (int i = 0; i < n; i++)
         {
-            if (arr[i] == newArr[j])
+            if (arr[c] == newArr[i])
             {
-                cout << j << " ";
+                cout << i + 1 << " ";
             }
         }
+        c++;
     }
 
     return 0;
