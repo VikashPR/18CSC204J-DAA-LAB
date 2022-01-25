@@ -1,3 +1,4 @@
+// Identical or non Identical
 #include <iostream>
 using namespace std;
 
@@ -60,13 +61,13 @@ int main()
 
     r2->left = newNode(2);
     r2->right = newNode(4);
-    r2->left->left = newNode(2);
+    r2->left->left = newNode(1);
     r2->left->right = newNode(1);
 
     if (isIdentical(r1, r2))
-        cout << "Both BSTs are identical";
+        cout << "Identical";
     else
-        cout << "BSTs are not identical";
+        cout << "Non-Identical";
 
     return 0;
 }
