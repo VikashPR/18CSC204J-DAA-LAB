@@ -42,9 +42,6 @@ void insertionSort(int arr[], int length)
     printArr(arr, length);
 }
 
-
-
-// main function
 int main() 
 {
     int n;
