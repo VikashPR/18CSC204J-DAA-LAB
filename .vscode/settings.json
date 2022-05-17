@@ -61,7 +61,8 @@
         "system_error": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "random": "cpp"
     },
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#3399ff",
