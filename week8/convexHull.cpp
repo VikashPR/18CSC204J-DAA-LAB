@@ -233,6 +233,5 @@ int main()
 	for (auto e:ans)
 	cout << e.first << " "
 			<< e.second << endl;
-
 	return 0;
 }
