@@ -1,8 +1,5 @@
-// Rabin-Karp algorithm in C++
-
-#include <string.h>
-
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 #define d 10
@@ -58,3 +55,12 @@ int main()
     int q = 13;
     rabinKarp(pattern, text, q);
 }
+
+// Github-Prettier-Action/
+// ├─ .github/
+// │  ├─ prettier.yml
+// ├─ src/
+// │  ├─ main.js
+// ├─ LICENSE
+// ├─ package-lock.json
+// ├─ package.json
