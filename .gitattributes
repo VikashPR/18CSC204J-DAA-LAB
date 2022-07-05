@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Ignore Everything
+*
+# But not .cpp
+!*.cpp
+!*.c
+!*.sh
+!*.py
+# Or directories
+!*/
+!.gitignore
+!README.md
